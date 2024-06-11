@@ -1,5 +1,57 @@
 # LLMs: Foundations and the Big Picture
 
+## Brief History of NLP
+
+A bit of background helps us understand both how we got here, and why people are excited about LLMs.
+
+*Instructor note: go fast, don't get into the weeds. Draw a timeline on the whiteboard*
+
+* Early days: 1950
+    * Noam Chomsky led a lot of efforts to mathematically model grammar
+    * Major focus was on machine translation.
+    * Systems were all "rules based" systems.
+    * Heavy reliance on dictionary type structures and hard coded word order / grammar rules.
+    * This was a period of extreme excitement, many people in the 50s believed machine translation would be a solved problem 
+    * This was a period of extreme excitement, many people in the 50s declared machine translation would be a solved problem by the end of the decade
+        * That didn't happen.
+* Excitement -> Disappointment: 1960s
+    * Still primarily focused on "rules based" expert systems.
+    * Lots of experiments with "unnatural" languages -- such as computer languages, with perfectly consistent grammars and rules.
+    * ELIZA was one of the first successful "chatbots" 
+        * Specifically it was a "reflection based" psychotherapist system.
+        * Quite limited in scope and capability, in part due to computer memory constraints.
+    * But... nothing worked as well or as quickly as researchers had boldly declared in the 50s
+* AI Winter: 1970's
+    * Way less research funding and interest.
+    * Smaller cohort of researchers
+    * Not a lot happened, honestly.
+* The Last Gasp of Symbolic / Rules Based NLP: 1980s - 1990s
+    * Computing and AI was once again popular in the public zeitgeist.
+    * A lot of new ideas, still rooted in symbolic reasoning and rules based systems appeared.
+    * Improvements in memory allowed for more complex parsing trees, bigger vocabularies, etc.
+    * Lots of chatbots made their attempts to pass the "Turing test" 
+    * Statistical approaches started to appear and become popular.
+        * N-Gram models, Naïve Bayes, 
+* Statistical approaches dominate, Simple Neural Networks specifically: 2000s
+    * Word Embeddings emerge to capture semantic meaning in a numerical format 
+    * "Multi-layer perceptron" models first beats previous SOTA n-gram model in 2003
+    * Data availability is skyrocketing due to the internet
+    * Moore's Law has been in motion for decades
+    * Huge data + powerful computers are the key combo for unlocking statistical methods
+* Recurrent Neural Networks and "Deep Learning": 2010s
+    * RNNs emerge and crush a slew of benchmarks. 
+    * 2017: "The Bitter Lesson" published by Richard Sutton.
+        * Basically, all that clever stuff based on linguistics doesn't work nearly as well as raw computing power and "general" methods
+* Transformers and "LLMs": 2017-current
+    * The "Transformer" architecture is invented in the paper "Attention is All You Need"
+    * This is a novel neural network architecture that solves a key computational issue with RNNs
+        * RNNs had to work on one word at a time.
+        * Transformers have a "context window" that performs the computation on many words all at once.
+    * Transformer based systems quickly smash through every NLP benchmark and become SOTA in basically every subdomain.
+
+
+## LLMs Specifically
+
 * Start with some probing questions, get the students to describe some specific things they already know.
     
 * **So what are these ... Lets start with the name's components: "Large Language Model" ...**
