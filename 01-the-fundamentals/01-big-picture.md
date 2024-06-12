@@ -66,6 +66,8 @@ A bit of background helps us understand both how we got here, and why people are
         * Models just take input and produce output.
         * Agents take actions over time in an environment.
             * Agents might use or be composed of one or more models.
+            * Agents might run in the context of an application, and might also have access to controlling other applications.
+            * The definition of an Agent is, unfortunately, kinda of hard to pin down and keeps changing as time goes on.
 
         * Talk through a couple examples:
             * GPT-4 is a model, ChatGPT is an agent.
@@ -74,10 +76,12 @@ A bit of background helps us understand both how we got here, and why people are
                 * ChatGPT has some memory of the various prompt/responses in a session.
                 * ChatGPT can do additional things like perform web searches and execute code snippets sent to the service. 
 
-            * Siri is a simple agent. 
-                * "Set a timer for 10 minutes"
-                * Speech to text model first, then text to possible actions model (likely an LLM). 
-                * Finally some code that causes the actions to happen. (set timer, send text)
+            * Siri is an agent that (as of June 2024) is about to get much more complicated. 
+                * For many years Siri was quite simple
+                    * Set timers, send texts, do a web search... 
+                    * Speech to text model first, then text to possible actions model (likely an LLM). 
+                    * Finally some code that causes the actions to happen. (set timer, send text)
+                * But following the Apple Intelligence announcements, Siri is going to have much more access to other applications and the operating system.  
 
             * Self Driving Cars are more complex agents
                 * Many models for processing the various inputs (visual, audio, LiDAR, etc.)
@@ -101,7 +105,7 @@ A bit of background helps us understand both how we got here, and why people are
                 * multi-label: multiclass but the model can output multiple classifications for a single output. This ticket is angry and violates terms of service.
 
             * Regressions: make a numerical prediction from text input.
-                    * This review represents a 4.5/5 rating.
+                * This review represents a 4.5/5 rating.
 
 
 ## Models, Agents, and Applications
@@ -115,6 +119,7 @@ A bit of background helps us understand both how we got here, and why people are
     * It's highly transactional
     * Each input -> output sample is independent.
     * We're going to look at how models are built in significant depth in just a moment.
+    * "Model" means something pretty specific to AI people.
 
 * Agents take action over time in an environment
     * Some agents are "trained," similar to how neural networks are trained
@@ -122,11 +127,15 @@ A bit of background helps us understand both how we got here, and why people are
     * They may incorporate one or more models.
     * Refer to the above examples (Siri, self driving, ChatGPT)
 
-* Both "agent" and "model" mean something pretty specific to AI experts.
-
 * Applications are far more general. Anything is an application.
     * ChatGPT's interface is an application that includes an agent
     * Game playing AI's are agents, but to actually enact the game itself (so a human can play too) there would need to be more application code.
+
+* Increasingly, the definition of an "agent" is becoming muddled and confusing. 
+    * Partly this is because it's becoming a kind of marketing term. 
+    * Partly it's because "AI" capabilities have just gotten much better and more varied, which inherently expands the scope of the definition
+    * Partly it's because they're becoming more deeply integrated into systems, blurring the line between "application" and "agent" 
+        * In June 2024 for example, Siri
 
 
 * **Can you tell me a few things you know LLM's have been used for? OR examples of LLMs?**
@@ -134,7 +143,6 @@ A bit of background helps us understand both how we got here, and why people are
     * Use some probing questions about their examples:
         * *What portion of this is the 'model' vs 'agent' or 'application'?
         * *How risky is this use? What could go wrong? Why?*
-        * **
 
 
 * **Perhaps some of you have heard of some ways these models can fail, or cause problems?**

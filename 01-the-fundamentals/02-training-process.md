@@ -68,6 +68,17 @@
     * "All models are wrong, some are useful"
         * The model doesn't have to represent some kind of fundamental truth about writing or language or grammar to be useful!
 
+## Mini Exercise: Explore a Model As It Trains
+
+* Training happens in a series of "rounds" also called "epochs."
+    * Typically, during each round the model is shown every sample from the training dataset.
+    * Each round is composed of several "batches," ML Engineers can choose the "batch size"
+    * The parameters are updated once per batch. 
+
+* Everyone, take 5 minutes and explore this article where you can see how the results of a (relatively small) LLM change over these rounds, based on training datasets of particular authors.
+* [https://www.nytimes.com/interactive/2023/04/26/upshot/gpt-from-scratch.html](https://www.nytimes.com/interactive/2023/04/26/upshot/gpt-from-scratch.html)
+
+* We'll discuss as a group when time is up.
 
 ## Stages and Types of Training
 
