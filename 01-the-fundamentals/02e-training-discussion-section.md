@@ -19,7 +19,7 @@ You've had some instruction on what LLMs are and how they are trained. Now, your
         * Are there some features that are definitely shared?
 
 * There is genuine tension between collecting huge datasets and collecting high quality datasets... With that in mind:
-    * What sorts of compromises are might LLM make along this axis?
+    * What sorts of compromises might LLM trainers make along this axis?
     * Are you aware of any competing philosophies on this point?
 
 * What sorts of errors might you expect from statistical models trained this way?
