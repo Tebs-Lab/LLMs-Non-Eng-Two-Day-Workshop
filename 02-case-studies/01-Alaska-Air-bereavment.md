@@ -1,4 +1,4 @@
-# Alaska Airlines Chatbot Invents a Discount
+# Air Canada Airlines Chatbot Invents a Discount
 
 Article: 
 [https://www.forbes.com/sites/marisagarcia/2024/02/19/what-air-canada-lost-in-remarkable-lying-ai-chatbot-case/](https://www.forbes.com/sites/marisagarcia/2024/02/19/what-air-canada-lost-in-remarkable-lying-ai-chatbot-case/)
