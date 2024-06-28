@@ -15,30 +15,6 @@
 * We **always** choose functions for our neural networks that satisfy the UFAT.
 * Training a neural network is best thought of as a search for a useful math function.
 
-## LLM Components
-
-* It's critical to remember throughout this that *every one of these components* has learned parameters that change and update through the gradient descent process. 
-
-* Neural Networks are always composed of a series of "layers" 
-* Each layer does some kind of mathematical transformation on the output of one or more of the previous layers.
-* Layers are basically chosen for n reasons:
-    * They transform the output into a useful "shape" with useful properties
-        * For example, an LLM's final layer's output has the following properties:
-            * 1 number per token in the model's vocabulary
-            * Each number is between 0-1
-            * All the numbers sum to 1
-            * i.e. It's a probability distribution of the words in the model's vocabulary.
-
-    * They accept inputs that we think are relevant to the predictions we want to make
-        * For example, in an LLM the "attention" layer takes several words all at once in order to predict the next word.
-            * Obviously, the first 6 words in a sentence would be useful when predicting the 7th word.
-    
-    * They are efficient to compute on specialized hardware. 
-        * This aspect is often overlooked by the general public
-        * It might also be the most important aspect of them all. 
-        * Every major breakthrough in Deep Learning since 2012 has been a layer that does has one of the first two properties, but does it much faster than the previous SOTA method. 
-        * Being able to train more rounds in a fixed amount of computational cycles is a *huge* win in neural network research.
-
 ### Pre-processing
 
 * Data being fed to neural networks generally undergoes a "preprocessing" step.
@@ -116,6 +92,30 @@ tripping
     * Sometimes it is, though, and some of the fields have clearly discernible meaning.
     * **Micro Exercise: Think of some forms of 'semantic meaning' that could be numerically encoded.**
 
+## LLM Components
+
+* It's critical to remember throughout this that *every one of these components* has learned parameters that change and update through the gradient descent process. 
+
+* Neural Networks are always composed of a series of "layers" 
+* Each layer does some kind of mathematical transformation on the output of one or more of the previous layers.
+* Layers are basically chosen for 3 reasons:
+    * They transform the output into a useful "shape" with useful properties
+        * For example, an LLM's final layer's output has the following properties:
+            * 1 number per token in the model's vocabulary
+            * Each number is between 0-1
+            * All the numbers sum to 1
+            * i.e. It's a probability distribution of the words in the model's vocabulary.
+
+    * They accept inputs that we think are relevant to the predictions we want to make
+        * For example, in an LLM the "attention" layer takes several words all at once in order to predict the next word.
+            * Obviously, the first 6 words in a sentence would be useful when predicting the 7th word.
+    
+    * They are efficient to compute on specialized hardware. 
+        * This aspect is often overlooked by the general public
+        * It might also be the most important aspect of them all. 
+        * Every major breakthrough in Deep Learning since 2012 has been a layer that does has one of the first two properties, but does it much faster than the previous SOTA method. 
+        * Being able to train more rounds in a fixed amount of computational cycles is a *huge* win in neural network research.
+
 ### Attention
 
 * Two kinds, self attention and cross attention
@@ -179,6 +179,7 @@ tripping
 
 * **Micro-Exercise: Can you think of a phrase that, similar to "queen of hearts," has completely different meaning depending on the context?**
     * *Hint that idioms are a great example of this...*
+    * Then, go ask ChatGPT about that idiom!
 
 #### The Prediction FF Block
 
